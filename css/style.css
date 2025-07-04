@@ -8,7 +8,10 @@
     border: 2px solid black;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;                         
+    justify-content: space-between; 
+    position: sticky; /* Make the navbar sticky */  
+    top: 0px; /* Position it at the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */      
 }
 .nav-links {
     border: 2px solid black;
@@ -24,4 +27,13 @@
     display: flex;
     align-items: center;
     gap: 5px; /* Space between theme toggle elements */
+}
+#home {
+    background-color: aquamarine;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
 }
