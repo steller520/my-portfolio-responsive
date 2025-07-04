@@ -1,0 +1,27 @@
+#header {
+    background-color: white;
+    display:flex;                         
+    justify-content: space-between;  
+    border: 2px solid black;      
+}
+#navbar {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;                         
+}
+.nav-links {
+    border: 2px solid black;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    gap: 20px; /* Space between menu items */                  
+}
+.theme-toggle {
+    padding: 2px 2px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between theme toggle elements */
+}

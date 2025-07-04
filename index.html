@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <img src="" alt="logo" class="logo">
-        <nav>
-            <ul>
+        <nav id="navbar">
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -18,7 +18,16 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <section class="theme-toggle">
+             <input type="radio" name="theme" id="light-theme" checked>
+        <label for="dark-theme">Dark</label>
+        <input type="radio" name="theme" id="dark-theme">
+        <label for="light-theme">Light</label>
+        </section> 
         </nav>
+          
+
+
     </header>
     <section id="home">
         <h1>Welcome to My Portfolio</h1>
