@@ -1,8 +1,19 @@
+body {
+    font-family: Arial, sans-serif; /* Set a default font for the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f0f0f0; /* Light background color for the body */
+}
 #header {
     background-color: white;
     display:flex;                         
     justify-content: space-between;  
-    border: 2px solid black;      
+    border: 2px solid black;  
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Full width of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+    padding: 10px; /* Padding for the header */
 }
 #navbar {
     border: 2px solid black;
@@ -11,7 +22,9 @@
     justify-content: space-between; 
     position: sticky; /* Make the navbar sticky */  
     top: 0px; /* Position it at the top of the viewport */
-    z-index: 1000; /* Ensure it stays above other content */      
+    z-index: 1000; /* Ensure it stays above other content */
+    margin-right: 20px; /* Margin to the right of the navbar */
+    padding: 2px; /* Padding for the navbar */
 }
 .nav-links {
     border: 2px solid black;
@@ -30,9 +43,9 @@
 }
 .section {
     padding: 10px; /* Padding for each section */
-    margin: 10px; /* Margin around each section */
+    margin: 10px 0px; /* Margin between sections */
     border: 2px solid black; /* Border around each section */
-    background-color: white; /* Background color for sections */
+    background-color: aquamarine; /* Background color for sections */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack content vertically */
