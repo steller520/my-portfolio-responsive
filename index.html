@@ -7,67 +7,79 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header id="header">
-      <img src="images/logo/Shivam.png" alt="logo" class="logo" />
-      <section class="theme-toggle">
-        <input type="checkbox" id="mode-toggle" checked />
-        <label for="mode-toggle" class="slider"></label>
-      </section>
-      <nav id="navbar">
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section id="home" class="section">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Discover my work and skills.</p>
-    </section>
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>Information about myself.</p>
-    </section>
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-      <p>Details about my skills.</p>
-    </section>
-    <section id="services" class="section">
-      <h2>Services</h2>
-      <p>What services I offer.</p>
-    </section>
-    <section id="certificates" class="section">
-      <h2>Certificates</h2>
-      <p>My certifications and achievements.</p>
-    </section>
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <p>Showcase of my projects.</p>
-    </section>
-    <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <p>How to get in touch with me.</p>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-    <footer id="footer">
-      <p>&copy; 2023 My Portfolio. All rights reserved.</p>
-      <div class="social-links">
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-        <a href="#">Twitter</a>
+    <div class="wrapper">
+      <input type="checkbox" id="mode-toggle" checked />
+      <label for="mode-toggle" class="slider">
+          <span class="icon icon-sun"><svg width="24" height="24" viewBox="0 0 24 24" fill="aquamarine" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 4V2M12 22v-2M4.22 4.22l-1.42-1.42M19.78 19.78l-1.42-1.42M2 12H4m16 0h2M4.22 19.78l-1.42 1.42M19.78 4.22l-1.42 1.42M12 6a6 6 0 100 12 6 6 0 000-12z" stroke="aquamarine" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</span>
+          <span class="icon icon-moon"><svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+  <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</span>
+        </label>
+      
+      <div class="container">
+        <header id="header">
+          <img src="images/logo/Shivam.png" alt="logo" class="logo"/>
+          <nav id="navbar">
+            <ul class="nav-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <section id="home" class="section">
+          <h1>Welcome to My Portfolio</h1>
+          <p>Discover my work and skills.</p>
+        </section>
+        <section id="about" class="section">
+          <h2>About Me</h2>
+          <p>Information about myself.</p>
+        </section>
+        <section id="skills" class="section">
+          <h2>Skills</h2>
+          <p>Details about my skills.</p>
+        </section>
+        <section id="services" class="section">
+          <h2>Services</h2>
+          <p>What services I offer.</p>
+        </section>
+        <section id="certificates" class="section">
+          <h2>Certificates</h2>
+          <p>My certifications and achievements.</p>
+        </section>
+        <section id="projects" class="section">
+          <h2>Projects</h2>
+          <p>Showcase of my projects.</p>
+        </section>
+        <section id="contact" class="section">
+          <h2>Contact Me</h2>
+          <p>How to get in touch with me.</p>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </section>
+        <footer id="footer">
+          <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+          <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+          </div>
+        </footer>
       </div>
-    </footer>
+    </div>
   </body>
 </html>

@@ -13,8 +13,9 @@ body {
     position: fixed; /* Make the header fixed */
     top: 0; /* Position it at the top of the viewport */
     width: 100%; /* Full width of the viewport */
-    z-index: 1000; /* Ensure it stays above other content */
+    z-index: 10; /* Ensure it stays above other content */
     padding: 10px; /* Padding for the header */
+    height: 50px;
 }
 #navbar {
     border: 2px solid black;
@@ -46,7 +47,7 @@ body {
     padding: 10px; /* Padding for each section */
     margin: 10px 0px; /* Margin between sections */
     border: 2px solid black; /* Border around each section */
-    background-color: aquamarine; /* Background color for sections */
+    /* background-color: aquamarine;  */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack content vertically */
@@ -73,7 +74,7 @@ body {
     padding: 10px; /* Padding for the footer text */
 }
 .logo {
-    width: 60px; /* Set a fixed width for the logo */
+    width: 50px; /* Set a fixed width for the logo */
     height: auto; /* Maintain aspect ratio */
     margin-right: 20px; /* Space between logo and navbar */
     border: 1px solid orange; /* Border around the logo */
@@ -84,27 +85,55 @@ body {
     display: none; /* Hide the default radio buttons */
 }
 .slider {
-    width: 50px; /* Width of the slider */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 52px; /* Width of the slider */
     height: 25px; /* Height of the slider */
-    background-color: blanchedalmond; /* Background color of the slider */
+    padding: auto;
+    background-color: rgba(127, 255, 212, 0.293); /* Background color of the slider */
     border-radius: 25px; /* Rounded corners for the slider */
-    position: relative; /* Position relative for the toggle switch */
+    position: fixed; /* Position relative for the toggle switch */
+    top: 20px; /* Position it below the header */
+    left: 50%; /* Center it horizontally */
     cursor: pointer; /* Pointer cursor on hover */
+    z-index: 1000; /* Ensure it stays above other content */
+    border: 3px rgb(142, 248, 212) solid;
+    
+    
 }
 .slider::before {
     content: ""; /* Empty content for the toggle switch */
     position: absolute; /* Position absolute for the toggle switch */
-    width: 20px; /* Width of the toggle switch */
-    height: 20px; /* Height of the toggle switch */
-    background-color: blueviolet; /* Background color of the toggle switch */
+    width: 24px; /* Width of the toggle switch */
+    height: 24px; /* Height of the toggle switch */
+    background-color: rgb(155, 155, 155); /* Background color of the toggle switch */
     border-radius: 50%; /* Make the toggle switch circular */
-    top: 2.5px; /* Position the toggle switch vertically */
-    left: 2.5px; /* Position the toggle switch horizontally */
-    transition: transform 0.3s ease; /* Smooth transition for the toggle switch */
+    top: 0px; /* Position the toggle switch vertically */
+    left: 0px; /* Position the toggle switch horizontally */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the toggle switch */
 }
 #mode-toggle:checked + .slider::before {
-    transform: translateX(25px); /* Move the toggle switch to the right when checked */
+    transform: translateX(27px); /* Move the toggle switch to the right when checked */
 }
-
-
-
+.container {
+    width: 100dvw; /* Maximum width for the container */
+    margin: auto;  /*center the container */         
+    padding: 0px; /* Padding for the container */
+    background-color: aquamarine; /* Default background color for the container */
+}
+.toggle {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Space between toggle elements */
+    z-index: 1000; /* Ensure it stays above other content */
+    position: fixed; /* Make the toggle wrapper fixed */
+    top: 20px; /* Position it at the top of the viewport */
+    left: 50%; /* Center it horizontally */
+}
+#mode-toggle:checked ~ .container {
+    background-color: #333; /* Dark background color when dark mode is active */
+    color: white; /* White text color when dark mode is active */
+    z-index: 1000; /* Ensure it stays above other content */
+    margin: auto; /* Center the container */
+}
