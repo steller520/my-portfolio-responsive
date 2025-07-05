@@ -88,16 +88,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 52px; /* Width of the slider */
+    width: 50px; /* Width of the slider */
     height: 25px; /* Height of the slider */
-    padding: auto;
+    padding: 1px 0px 0px 5px;
     background-color: rgba(127, 255, 212, 0.293); /* Background color of the slider */
-    border-radius: 25px; /* Rounded corners for the slider */
+    border-radius: 20px; /* Rounded corners for the slider */
     position: fixed; /* Position relative for the toggle switch */
     top: 20px; /* Position it below the header */
     left: 50%; /* Center it horizontally */
     cursor: pointer; /* Pointer cursor on hover */
-    z-index: 1000; /* Ensure it stays above other content */
+    z-index: 10000; /* Ensure it stays above other content */
     border: 3px rgb(142, 248, 212) solid;
     
     
@@ -109,12 +109,13 @@ body {
     height: 24px; /* Height of the toggle switch */
     background-color: rgb(155, 155, 155); /* Background color of the toggle switch */
     border-radius: 50%; /* Make the toggle switch circular */
-    top: 0px; /* Position the toggle switch vertically */
+    top: 1px; /* Position the toggle switch vertically */
     left: 0px; /* Position the toggle switch horizontally */
     transition: transform 0.3s ease-in-out; /* Smooth transition for the toggle switch */
+    z-index: 10;
 }
 #mode-toggle:checked + .slider::before {
-    transform: translateX(27px); /* Move the toggle switch to the right when checked */
+    transform: translateX(30px); /* Move the toggle switch to the right when checked */
 }
 .container {
     width: 100dvw; /* Maximum width for the container */
@@ -136,4 +137,15 @@ body {
     color: white; /* White text color when dark mode is active */
     z-index: 1000; /* Ensure it stays above other content */
     margin: auto; /* Center the container */
+}
+.icon-moon {
+    position: relative;
+    top: 2%;
+    right: 6%;
+    z-index: 1;
+}
+.icon-sun {
+    position: relative;
+    z-index: 1;
+    top: 2%;
 }
