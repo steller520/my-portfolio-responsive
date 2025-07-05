@@ -86,7 +86,7 @@ body {
 .slider {
     width: 50px; /* Width of the slider */
     height: 25px; /* Height of the slider */
-    background-color: #ccc; /* Background color of the slider */
+    background-color: blanchedalmond; /* Background color of the slider */
     border-radius: 25px; /* Rounded corners for the slider */
     position: relative; /* Position relative for the toggle switch */
     cursor: pointer; /* Pointer cursor on hover */
@@ -96,13 +96,15 @@ body {
     position: absolute; /* Position absolute for the toggle switch */
     width: 20px; /* Width of the toggle switch */
     height: 20px; /* Height of the toggle switch */
-    background-color: white; /* Background color of the toggle switch */
+    background-color: blueviolet; /* Background color of the toggle switch */
     border-radius: 50%; /* Make the toggle switch circular */
     top: 2.5px; /* Position the toggle switch vertically */
     left: 2.5px; /* Position the toggle switch horizontally */
-    transition: transform 4s; /* Smooth transition for the toggle switch */
+    transition: transform 0.3s ease; /* Smooth transition for the toggle switch */
 }
-
+#mode-toggle:checked + .slider::before {
+    transform: translateX(25px); /* Move the toggle switch to the right when checked */
+}
 
 
 
