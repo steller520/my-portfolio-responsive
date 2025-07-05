@@ -73,6 +73,21 @@ body {
     border: 1px solid orange; /* Border around the logo */
     border-radius: 50%; /* Make the logo circular */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative; /* Position relative for the logo */
+    left: 20px; /* Adjust horizontal position of the logo */
+}
+.title {
+    font-size: 24px; /* Font size for the title */
+    font-style: italic; /* Italic style for the title */
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif; /* Stylish font for the title */
+    color: rgb(255, 196, 88); /* Text color for the title */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-weight: bold; /* Make the title bold */
+    position: relative;
+    top: 10px; /* Adjust vertical position of the title */
+    left: -20%; /* Adjust horizontal position of the title */
+    z-index: 1; /* Ensure the title appears above other elements */
 }
 /* Hide the default radio buttons for mode toggle */
 #mode-toggle {
@@ -156,9 +171,10 @@ body {
     justify-content: space-evenly; /* Space items evenly */
     padding: 20px; /* Padding for the home section */
     align-items: center; /* Center items vertically */
+    position: relative;
  
 }
-.resume:hover {
+.button:hover {
     color: blue; /* Change text color on hover */
     text-decoration: underline; /* Underline text on hover */
 }
@@ -173,6 +189,24 @@ body {
     transform: scale(1.1); /* Scale up the icon on hover */
     filter: brightness(1.2); /* Slightly brighten the icon on hover */
 }
+.box {
+    width: 100%; /* Full width for the box */
+    height: 100%; /* Full height for the box */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange content in a row */
+    justify-content: space-evenly; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+}
+.head {
+    align-self: center; /* Center the heading */
+    position: absolute; /* Position relative for the heading */
+    top: 10px; /* Adjust vertical position of the heading */
+}
+.first {
+    position: absolute; /* Position relative for the first heading */
+    top: 55px; /* Adjust vertical position of the first heading */
+    
+}
 .main-content {
     border: 1px solid black; /* Border around the main content */
     display: flex; /* Use flexbox for layout */
@@ -182,3 +216,86 @@ body {
     padding: 20px; /* Padding for the main content */
     width: 50%; /* Set a fixed width for the main content */
 }
+.sidebar {
+    width: 30%; /* Set a fixed width for the sidebar */
+    padding: 20px; /* Padding for the sidebar */
+    border: 1px solid black; /* Border around the sidebar */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+}
+#about {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px; /* Padding for the about section */
+    width: 100%; /* Full width for the about section */
+    height: 100vh; /* Full viewport height for the about section */
+    position: relative;
+}
+/* Progress bar and circular progress styles */
+/* Progress bar styles */
+.progress-bar {
+  width: 300px;
+  height: 24px;
+  background: #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  width: 50%; /* Change per progress */
+  border-radius: 12px 0 0 12px;
+  transition: width 0.4s;
+}
+/* Progress bar styles end */
+/* Circular progress styles */
+.circular-progress {
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #eee;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+  position: relative;
+}
+.mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  clip: rect(0, 120px, 120px, 60px);
+}
+.mask.full {
+  clip: rect(0, 60px, 120px, 0);
+  background: linear-gradient(#4e54c8, #8f94fb);
+  transform: rotate(126deg); /* 70% of 180deg = 126deg */
+}
+.mask.half {
+  background: linear-gradient(#4e54c8, #8f94fb);
+  clip: rect(0, 120px, 120px, 60px);
+  transform: rotate(252deg); /* 70% of 360deg = 252deg */
+}
+.inside-circle {
+  width: 90%;
+  height: 90%;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #4e54c8;
+}
+/* Circular progress styles end */
+
