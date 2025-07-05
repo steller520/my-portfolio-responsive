@@ -150,3 +150,35 @@ body {
     z-index: 1; /* Ensure the icon appears above background elements but below slider */
     top: 2%; /* Adjust vertical position of the icon slightly for better alignment */
 }
+#home {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange content in a row */
+    justify-content: space-evenly; /* Space items evenly */
+    padding: 20px; /* Padding for the home section */
+    align-items: center; /* Center items vertically */
+ 
+}
+.resume:hover {
+    color: blue; /* Change text color on hover */
+    text-decoration: underline; /* Underline text on hover */
+}
+.socialicon {
+    width: 30px; /* Set a fixed width for social icons */
+    height: 30px; /* Set a fixed height for social icons */
+    margin: 0 5px; /* Margin between social icons */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    padding: 10px 0px; /* Padding for social icons */
+}
+.socialicon:hover {
+    transform: scale(1.1); /* Scale up the icon on hover */
+    filter: brightness(1.2); /* Slightly brighten the icon on hover */
+}
+.main-content {
+    border: 1px solid black; /* Border around the main content */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    padding: 20px; /* Padding for the main content */
+    width: 50%; /* Set a fixed width for the main content */
+}
