@@ -81,9 +81,11 @@ body {
     border-radius: 50%; /* Make the logo circular */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+/* Hide the default radio buttons for mode toggle */
 #mode-toggle {
     display: none; /* Hide the default radio buttons */
 }
+/* Slider for the light/dark mode toggle switch */
 .slider {
     display: flex;
     justify-content: space-between;
@@ -98,10 +100,10 @@ body {
     left: 50%; /* Center it horizontally */
     cursor: pointer; /* Pointer cursor on hover */
     z-index: 10000; /* Ensure it stays above other content */
-    border: 3px rgb(142, 248, 212) solid;
-    
-    
+    border: 3px #333 solid; /* Border for the slider */
+    transition: transform 0.3 ease-in-out; /* Smooth transition for the slider */
 }
+/* Toggle knob for the slider (light/dark mode switch) */
 .slider::before {
     content: ""; /* Empty content for the toggle switch */
     position: absolute; /* Position absolute for the toggle switch */
@@ -112,8 +114,14 @@ body {
     top: 1px; /* Position the toggle switch vertically */
     left: 0px; /* Position the toggle switch horizontally */
     transition: transform 0.3s ease-in-out; /* Smooth transition for the toggle switch */
-    z-index: 10;
+    z-index: 10; /* Ensure the toggle knob stays above the slider background */
 }
+/* Change slider background and border color when dark mode is active */
+#mode-toggle:checked + .slider {
+    background-color: #333;
+    border: 3px rgb(142, 248, 212) solid;
+}
+/* Move the toggle knob to the right when dark mode is active */
 #mode-toggle:checked + .slider::before {
     transform: translateX(30px); /* Move the toggle switch to the right when checked */
 }
@@ -139,13 +147,13 @@ body {
     margin: auto; /* Center the container */
 }
 .icon-moon {
-    position: relative;
-    top: 2%;
-    right: 6%;
-    z-index: 1;
+    position: relative; /* Positon relative for the moon icon*/
+    top: 2%;    /* Adjust vertical position of the icon slightly for better alignment */            
+    right: 2%; /* Adjust horizontal position of the moon icon for better alignment */
+    z-index: 1; /* Ensure the icon appears above background elements but below slider*/
 }
 .icon-sun {
-    position: relative;
-    z-index: 1;
-    top: 2%;
+    position: relative; /* Positon relative for the sun icon */
+    z-index: 1; /* Ensure the icon appears above background elements but below slider */
+    top: 2%; /* Adjust vertical position of the icon slightly for better alignment */
 }
