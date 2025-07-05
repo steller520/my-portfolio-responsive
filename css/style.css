@@ -18,7 +18,7 @@ body {
     height: 50px;
 }
 #navbar {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
@@ -29,19 +29,12 @@ body {
     padding: 2px; /* Padding for the navbar */
 }
 .nav-links {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
     gap: 20px; /* Space between menu items */                  
-}
-.theme-toggle {
-    padding: 2px 2px;
-    border: 2px solid black;
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Space between theme toggle elements */
 }
 .section {
     padding: 10px; /* Padding for each section */
