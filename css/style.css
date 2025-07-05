@@ -3,6 +3,7 @@ body {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     background-color: #f0f0f0; /* Light background color for the body */
+    border-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
 }
 #header {
     background-color: white;
@@ -71,3 +72,37 @@ body {
     text-align: center; /* Center the text */
     padding: 10px; /* Padding for the footer text */
 }
+.logo {
+    width: 60px; /* Set a fixed width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between logo and navbar */
+    border: 1px solid orange; /* Border around the logo */
+    border-radius: 50%; /* Make the logo circular */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+#mode-toggle {
+    display: none; /* Hide the default radio buttons */
+}
+.slider {
+    width: 50px; /* Width of the slider */
+    height: 25px; /* Height of the slider */
+    background-color: #ccc; /* Background color of the slider */
+    border-radius: 25px; /* Rounded corners for the slider */
+    position: relative; /* Position relative for the toggle switch */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+.slider::before {
+    content: ""; /* Empty content for the toggle switch */
+    position: absolute; /* Position absolute for the toggle switch */
+    width: 20px; /* Width of the toggle switch */
+    height: 20px; /* Height of the toggle switch */
+    background-color: white; /* Background color of the toggle switch */
+    border-radius: 50%; /* Make the toggle switch circular */
+    top: 2.5px; /* Position the toggle switch vertically */
+    left: 2.5px; /* Position the toggle switch horizontally */
+    transition: transform 4s; /* Smooth transition for the toggle switch */
+}
+
+
+
+
