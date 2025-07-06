@@ -138,15 +138,7 @@ body {
     padding: 0px; /* Padding for the container */
     background-color: aquamarine; /* Default background color for the container */
 }
-.toggle {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    gap: 10px; /* Space between toggle elements */
-    z-index: 1000; /* Ensure it stays above other content */
-    position: fixed; /* Make the toggle wrapper fixed */
-    top: 20px; /* Position it at the top of the viewport */
-    left: 50%; /* Center it horizontally */
-}
+
 #mode-toggle:checked ~ .container {
     background-color: #333; /* Dark background color when dark mode is active */
     color: white; /* White text color when dark mode is active */

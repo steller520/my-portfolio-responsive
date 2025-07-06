@@ -1,0 +1,273 @@
+@media (max-width: 360px) {
+    * {
+        box-sizing: border-box;
+        /* Ensure padding and border are included in the element's total width and height */
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        /* Set a default font for the body */
+        margin: 0;
+        /* Remove default margin */
+        padding: 0;
+        /* Remove default padding */
+        background-color: #f0f0f0;
+        /* Light background color for the body */
+
+    }
+
+    .container {
+        padding: 0px;
+        /* Padding for the container */
+        background-color: aquamarine;
+        /* Default background color for the container */
+        margin: auto;
+        /* Center the container */
+        width: 100%;
+    }
+
+    /* Toggle switch for dark mode */
+    /* This section styles the toggle switch for dark mode */
+
+    /* Hide the default radio buttons for mode toggle */
+    #mode-toggle {
+        display: none;
+        /* Hide the default radio buttons */
+    }
+
+    .slider {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50px;
+        /* Width of the slider */
+        height: 26px;
+        /* Height of the slider */
+        padding: 1px 0px 0px 5px;
+        background-color: rgba(127, 255, 212, 0.293);
+        /* Background color of the slider */
+        border-radius: 20px;
+        /* Rounded corners for the slider */
+        position: fixed;
+        /* Position relative for the toggle switch */
+        top: 20px;
+        /* Position it below the header */
+        right: 25%;
+        /* Center it horizontally */
+        cursor: pointer;
+        /* Pointer cursor on hover */
+        z-index: 100;
+        /* Ensure it stays above other content */
+        border: 3px #333 solid;
+        /* Border for the slider */
+        transition: transform 0.3 ease-in-out;
+        /* Smooth transition for the slider */
+    }
+
+    .icon-sun {
+        position: relative;
+        /* Position relative for the sun icon */
+        top: 2px;
+    }
+
+    .icon-moon {
+        position: relative;
+        /* Position relative for the moon icon */
+        top: 2px;
+        right: 2px;
+    }
+
+    .slider::before {
+        content: "";
+        /* Empty content for the toggle switch */
+        position: absolute;
+        /* Position absolute for the toggle switch */
+        width: 18px;
+        /* Width of the toggle switch */
+        height: 18px;
+        /* Height of the toggle switch */
+        background-color: rgb(155, 155, 155);
+        /* Background color of the toggle switch */
+        border-radius: 50%;
+        /* Make the toggle switch circular */
+        top: 2px;
+        /* Position the toggle switch vertically */
+        left: 2px;
+        /* Position the toggle switch horizontally */
+        transition: transform 0.3s ease-in-out;
+        /* Smooth transition for the toggle switch */
+        z-index: 10;
+        /* Ensure the toggle knob stays above the slider background */
+    }
+
+    /* Move the toggle knob to the right when dark mode is active */
+    #mode-toggle:checked+.slider::before {
+        transform: translateX(23px);
+        /* Move the toggle switch to the right when checked */
+    }
+
+    #mode-toggle:checked+.slider {
+        background-color: #333;
+        border: 3px rgb(142, 248, 212) solid;
+    }
+
+    #mode-toggle:checked~.container {
+        background-color: #333;
+        /* Dark background color when dark mode is active */
+        color: white;
+        /* White text color when dark mode is active */
+        z-index: 1000;
+        /* Ensure it stays above other content */
+        margin: auto;
+        /* Center the container */
+    }
+
+    /*toggle switch for dark mode end*/
+
+    /*header section*/
+    #header {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid black;
+        position: fixed;
+        /* Make the header fixed */
+        top: 0;
+        /* Position it at the top of the viewport */
+        width: 100dvw;
+        /* Full width of the viewport */
+        z-index: 10;
+        /* Ensure it stays above other content */
+        padding: 3px;
+        /* Padding for the header */
+        height: 4.3em;
+        /* Set a fixed height for the header */
+    }
+
+    .logo {
+        width: 3.5em;
+        /* Set a fixed width for the logo */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin-right: 2px;
+        /* Space between logo and navbar */
+        border: 1px solid orange;
+        /* Border around the logo */
+        border-radius: 50%;
+        /* Make the logo circular */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* Subtle shadow for depth */
+        position: relative;
+        /* Position relative for the logo */
+        left: 10px;
+        /* Adjust horizontal position of the logo */
+        top: 0;
+    }
+
+    /*navbar*/
+    .nav-links {
+        display: none;
+    }
+
+    .title {
+        font-size: 1em;
+        /* Font size for the title */
+        color: black;
+        /* Text color for the title */
+        margin-left: 10px;
+        /* Space between logo and title */
+        position: relative;
+        /* Position relative for the title */
+        top: 10px;
+        right: 60px;
+    }
+
+    .navbar-mobile {
+        display: flex;
+        flex-direction: column;
+        /* Use flexbox for layout */
+        align-items: center;
+        /* Center items vertically */
+        gap: 10px;
+        /* Space between navbar items */
+        position: fixed;
+        /* Position relative for the navbar */
+        top: 14px;
+        /* Position it below the header */
+        right: 5%;
+        /* Center it horizontally */
+        z-index: 1000;
+    }
+
+    #toggle {
+        display: none;
+        /* Hide the checkbox */
+    }
+
+    .burger-menu {
+        border: 1px solid black;
+        display: block;
+        align-self: last baseline;
+        /* Show the burger menu on small screens */
+        cursor: pointer;
+        /* Pointer cursor on hover */
+        position: relative;
+        /* Position relative for the burger menu */
+        top: 0;
+        /* Position it below the header */
+        right: 0;
+        /* Center it horizontally */
+        transition-duration: 0.5s;
+        /* transition-property: transform; */
+        /* transition-behavior: smooth; */
+        transition-delay: 0s;
+        /* transition-iteration-count: 1; */
+
+
+
+        /* Smooth transition for the burger menu */
+
+    }
+
+    #toggle:checked+.burger-menu {
+        transform: rotate(90deg);
+        /* Rotate the burger menu when active */
+    }
+
+    .nav-links-mobile {
+        visibility: hidden;
+        /* Hide the navigation links by default */
+        display: none;
+        /* Hide the navigation links by default */
+        position: absolute;
+        /* Position absolute for the navigation links */
+        top: 50px;
+        /* Position it below the header */
+        right: 0;
+        /* Align it to the right */
+        background-color: rgb(16, 201, 225);
+        /* Background color for the navigation links */
+        padding: 10px;
+        /* Padding for the navigation links */
+        border-radius: 5px;
+        /* Rounded corners for the navigation links */
+    }
+
+    #toggle:checked~.nav-links-mobile {
+        visibility: visible;
+        display: block;
+        /* Show the navigation links when the burger menu is hovered */
+        position: absolute;
+        /* Position absolute for the navigation links */
+        top: 50px;
+        /* Position it below the header */
+        right: 0;
+        /* Align it to the right */
+        background-color: rgb(16, 201, 225);
+        /* Background color for the navigation links */
+        padding: 10px;
+        /* Padding for the navigation links */
+        border-radius: 5px;
+        /* Rounded corners for the navigation links */
+    }
+}
