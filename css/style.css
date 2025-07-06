@@ -198,15 +198,10 @@ body {
     justify-content: space-evenly; /* Space items evenly */
     align-items: center; /* Center items vertically */
 }
-.head {
-    align-self: center; /* Center the heading */
-    position: absolute; /* Position relative for the heading */
-    top: 10px; /* Adjust vertical position of the heading */
-}
 .first {
-    position: absolute; /* Position relative for the first heading */
-    top: 55px; /* Adjust vertical position of the first heading */
-    
+    align-self: center;
+    position: absolute;
+    top: 55px;
 }
 .main-content {
     border: 1px solid black; /* Border around the main content */
@@ -482,3 +477,60 @@ body {
 }
 /* projects section styles end */
 /* Contact section styles */
+.contact-form-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    width: 30%; /* Full width for the contact form container */
+    padding: 20px; /* Padding for the contact form container */
+}
+
+/* Add border to the form when any input or textarea is focused */
+.contact-form:focus-within {
+    border: 2px solid #4e54c8;
+    border-radius: 8px;
+    box-shadow: 0 0 0 2px #8f94fb33;
+}
+
+.contact-form {
+    width: 100%; /* Full width for the contact form */
+    max-width: 600px; /* Maximum width for the contact form */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    gap: 16px; /* Space between form elements */
+    transition: border 0.2s, box-shadow 0.2s;
+}
+.contact-form label {
+    font-weight: bold; /* Bold labels */
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Full width for input and textarea */
+    padding: 10px; /* Padding for input and textarea */
+    border: 1px solid #ccc; /* Border around input and textarea */
+    border-radius: 4px; /* Rounded corners for input and textarea */            
+    font-size: 16px; /* Font size for input and textarea */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+.contact-form button {
+    background-color: #4e54c8; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for button */
+    padding: 10px 20px; /* Padding for button */        
+    font-size: 16px; /* Font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Block-level for centering */
+}
+.contact-form button:hover {
+    background-color: #8f94fb; /* Change background color on hover */
+    color: #222; /* Make text darker for contrast */
+    box-shadow: 0 4px 16px rgba(78,84,200,0.25); /* Add a visible shadow */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    border: 2px solid #4e54c8; /* Add a border for emphasis */
+}
+/* Contact section styles end */
