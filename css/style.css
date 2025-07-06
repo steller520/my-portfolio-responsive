@@ -50,7 +50,7 @@ body {
     width: 100%; /* Full width for each section */
 }
 #footer {
-    background-color: white;
+    background-color: #ffe5b4;
     border: 2px solid black;
     display: flex;  
     justify-content: center; /* Center footer content */
@@ -62,7 +62,6 @@ body {
 }
 .footer-text {
     font-size: 14px; /* Smaller font size for footer text */
-    color: black; /* Text color */
     text-align: center; /* Center the text */
     padding: 10px; /* Padding for the footer text */
 }
