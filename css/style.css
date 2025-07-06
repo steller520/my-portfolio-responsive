@@ -341,13 +341,53 @@ body {
 }
 /* Circular progress styles end */
 /* Skills section styles end */
-.card {
-    border: 1px solid black; /* Border around the cards section */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: row; /* Arrange content in a row */
-    justify-content: space-evenly; /* Space items evenly */
-    padding: 20px; /* Padding for the cards section */
-    width: 100%; /* Full width for the cards section */
-    height: 80px; /* Full viewport height for the cards section */
+/*certificate card layout styles */ 
+.certificate-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
 }
 
+.certificate-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: 280px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    transition: box-shadow 0.2s;
+}
+
+.certificate-card:hover {
+    box-shadow: 0 8px 32px rgba(78,84,200,0.35);
+    border-color: #4e54c8;
+    transform: scale(1.04);
+    background: #f3f4ff;
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s, background 0.2s;
+}
+
+.certificate-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #4e54c8;
+}
+
+.certificate-details {
+    font-size: 0.95em;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.certificate-date {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: auto;
+}
