@@ -1,5 +1,8 @@
 @media (min-width: 1024px) {
-
+    * {
+        box-sizing: border-box;
+        /* Ensure padding and border are included in the element's total width and height */
+    }
 
     body {
         font-family: Arial, sans-serif;
@@ -10,9 +13,25 @@
         /* Remove default padding */
         background-color: #f0f0f0;
         /* Light background color for the body */
-        border-sizing: border-box;
-        /* Ensure padding and border are included in element's total width and height */
     }
+
+    .box {
+        /* border: 1px solid black; */
+        /* Border around the box  to help in structure*/
+        width: 100%;
+        /* Full width for the box */
+        height: 100%;
+        /* Full height for the box */
+        display: flex;
+        /* Use flexbox for layout */
+        flex-direction: row;
+        /* Arrange content in a row */
+        justify-content: space-evenly;
+        /* Space items evenly */
+        align-items: center;
+        /* Center items vertically */
+    }
+
 
     #header {
         background-color: white;
@@ -27,9 +46,9 @@
         /* Full width of the viewport */
         z-index: 10;
         /* Ensure it stays above other content */
-        padding: 10px;
+        padding: 0.1875em;
         /* Padding for the header */
-        height: 50px;
+        height: 4.3em;
     }
 
     #navbar {
@@ -57,6 +76,11 @@
         justify-content: space-between;
         gap: 20px;
         /* Space between menu items */
+    }
+
+    .navbar-mobile {
+        display: none;
+        /* Hide the mobile navigation links by default */
     }
 
     .section {
@@ -111,11 +135,12 @@
     }
 
     .logo {
-        width: 50px;
+        width: 3.5em;
         /* Set a fixed width for the logo */
         height: auto;
         /* Maintain aspect ratio */
-        margin-right: 20px;
+        margin-right: 1.25em;
+        margin-top: 0.125em;
         /* Space between logo and navbar */
         border: 1px solid orange;
         /* Border around the logo */
@@ -127,10 +152,11 @@
         /* Position relative for the logo */
         left: 20px;
         /* Adjust horizontal position of the logo */
+        top: 0;
     }
 
     .title {
-        font-size: 24px;
+        font-size: 1.5em;
         /* Font size for the title */
         font-style: italic;
         /* Italic style for the title */
@@ -145,13 +171,16 @@
         font-weight: bold;
         /* Make the title bold */
         position: relative;
-        top: 10px;
+        top: 0.5em;
         /* Adjust vertical position of the title */
-        left: -20%;
+        right: 3.75em;
         /* Adjust horizontal position of the title */
         z-index: 1;
         /* Ensure the title appears above other elements */
     }
+
+    /* Toggle switch for dark mode */
+    /* This section styles the toggle switch for dark mode */
 
     /* Hide the default radio buttons for mode toggle */
     #mode-toggle {
@@ -164,9 +193,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 50px;
+        width: 3.125em;
         /* Width of the slider */
-        height: 25px;
+        height: 1.625em;
         /* Height of the slider */
         padding: 1px 0px 0px 5px;
         background-color: rgba(127, 255, 212, 0.293);
@@ -181,7 +210,7 @@
         /* Center it horizontally */
         cursor: pointer;
         /* Pointer cursor on hover */
-        z-index: 10000;
+        z-index: 100;
         /* Ensure it stays above other content */
         border: 3px #333 solid;
         /* Border for the slider */
@@ -195,17 +224,17 @@
         /* Empty content for the toggle switch */
         position: absolute;
         /* Position absolute for the toggle switch */
-        width: 24px;
+        width: 1.125em;
         /* Width of the toggle switch */
-        height: 24px;
+        height: 1.125em;
         /* Height of the toggle switch */
         background-color: rgb(155, 155, 155);
         /* Background color of the toggle switch */
         border-radius: 50%;
         /* Make the toggle switch circular */
-        top: 1px;
+        top: 0.125em;
         /* Position the toggle switch vertically */
-        left: 0px;
+        left: 0.125em;
         /* Position the toggle switch horizontally */
         transition: transform 0.3s ease-in-out;
         /* Smooth transition for the toggle switch */
@@ -221,7 +250,7 @@
 
     /* Move the toggle knob to the right when dark mode is active */
     #mode-toggle:checked+.slider::before {
-        transform: translateX(30px);
+        transform: translateX(23px);
         /* Move the toggle switch to the right when checked */
     }
 
@@ -254,15 +283,13 @@
         /* Adjust vertical position of the icon slightly for better alignment */
         right: 2%;
         /* Adjust horizontal position of the moon icon for better alignment */
-        z-index: 1;
-        /* Ensure the icon appears above background elements but below slider*/
+        
     }
 
     .icon-sun {
         position: relative;
         /* Positon relative for the sun icon */
-        z-index: 1;
-        /* Ensure the icon appears above background elements but below slider */
+
         top: 2%;
         /* Adjust vertical position of the icon slightly for better alignment */
     }
@@ -290,15 +317,15 @@
     }
 
     .socialicon {
-        width: 30px;
+        width: 2em;
         /* Set a fixed width for social icons */
-        height: 30px;
+        height: 2em;
         /* Set a fixed height for social icons */
-        margin: 0 5px;
+        margin: 10px 5px;
         /* Margin between social icons */
         transition: transform 0.3s ease-in-out;
         /* Smooth transition for hover effect */
-        padding: 10px 0px;
+        padding: 0px 0px;
         /* Padding for social icons */
     }
 
@@ -309,22 +336,6 @@
         /* Slightly brighten the icon on hover */
     }
 
-    .box {
-        border: 1px solid black;
-        /* Border around the box */
-        width: 100%;
-        /* Full width for the box */
-        height: 100%;
-        /* Full height for the box */
-        display: flex;
-        /* Use flexbox for layout */
-        flex-direction: row;
-        /* Arrange content in a row */
-        justify-content: space-evenly;
-        /* Space items evenly */
-        align-items: center;
-        /* Center items vertically */
-    }
 
     .first {
         align-self: center;
@@ -333,7 +344,7 @@
     }
 
     .main-content {
-        border: 1px solid black;
+        /* border: 1px solid black; */
         /* Border around the main content */
         display: flex;
         /* Use flexbox for layout */
@@ -343,9 +354,9 @@
         /* Center content horizontally */
         justify-content: center;
         /* Center content vertically */
-        padding: 20px;
+        /* padding: 20px; */
         /* Padding for the main content */
-        width: 50%;
+        width: 70%;
         /* Set a fixed width for the main content */
     }
 
@@ -394,7 +405,7 @@
     }
 
     .progress-bar-container {
-        border: 1px solid black;
+        /* border: 1px solid black; */
         /* Border around the progress bar container */
         display: flex;
         /* Use flexbox for layout */
@@ -411,7 +422,7 @@
     }
 
     .circular-progress-container {
-        border: 1px solid black;
+        /* border: 1px solid black; */
         /* Border around the circular progress container */
         display: flex;
         /* Use flexbox for layout */
@@ -442,8 +453,9 @@
         /* Full width for the bar */
         height: 40px;
         /* Full height for the bar */
-        border: 1px solid #ccc;
+        /* border: 1px solid #ccc; */
         /* Border around the bar */
+        margin-bottom: 0.125em;
     }
 
     .progress-bar {
@@ -469,7 +481,8 @@
     .circle-bar {
         width: auto;
         height: auto;
-        border: 1px solid #ccc;
+        margin-bottom: 0.625em;
+        /* border: 1px solid #ccc; */
         /* Border around the circular progress bar */
 
     }

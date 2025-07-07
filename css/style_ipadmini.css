@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 
     * {
         box-sizing: border-box;
@@ -28,7 +28,7 @@
         justify-content: center;
         /* Center items horizontally */
         gap: 10px;
-        border: 1px solid black;
+        /* border: 1px solid black; */
         width: 100%;
         /* Full width of the box */
         height: 100%;
@@ -110,9 +110,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 50px;
+        width: 3.125em;
         /* Width of the slider */
-        height: 26px;
+        height: 1.625em;
         /* Height of the slider */
         padding: 1px 0px 0px 5px;
         background-color: rgba(127, 255, 212, 0.293);
@@ -153,17 +153,17 @@
         /* Empty content for the toggle switch */
         position: absolute;
         /* Position absolute for the toggle switch */
-        width: 18px;
+        width: 1.125em;
         /* Width of the toggle switch */
-        height: 18px;
+        height: 1.125em;
         /* Height of the toggle switch */
         background-color: rgb(155, 155, 155);
         /* Background color of the toggle switch */
         border-radius: 50%;
         /* Make the toggle switch circular */
-        top: 2px;
+        top: 0.125em;
         /* Position the toggle switch vertically */
-        left: 2px;
+        left: 0.125em;
         /* Position the toggle switch horizontally */
         transition: transform 0.3s ease-in-out;
         /* Smooth transition for the toggle switch */
@@ -199,7 +199,7 @@
     #header {
         background-color: white;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         border: 2px solid black;
         position: fixed;
         /* Make the header fixed */
@@ -209,7 +209,7 @@
         /* Full width of the viewport */
         z-index: 10;
         /* Ensure it stays above other content */
-        padding: 3px;
+        padding: 0.1875em;
         /* Padding for the header */
         height: 4.3em;
         /* Set a fixed height for the header */
@@ -221,7 +221,7 @@
         /* Set a fixed width for the logo */
         height: auto;
         /* Maintain aspect ratio */
-        margin-right: 2px;
+        margin-right: 0.125em;
         /* Space between logo and navbar */
         border: 1px solid orange;
         /* Border around the logo */
@@ -251,7 +251,7 @@
         position: relative;
         /* Position relative for the title */
         top: 0;
-        right: 60px;
+        right: 3.75em;
     }
 
     /*burger menu styles*/
