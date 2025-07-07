@@ -787,6 +787,7 @@
 #certificates,
 #projects,
 #contact {
+    animation: leftToRight 0.5s ease-in-out;
     padding-top: 1em;
     text-align: center;
 }

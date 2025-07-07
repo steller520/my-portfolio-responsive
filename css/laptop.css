@@ -38,6 +38,8 @@
         /* Makes each section fill the viewport height */
         width: 100%;
         /* Makes each section full width */
+        /* background-color: aquamarine;  */
+        /* Subtle shadow for depth */
     }
 
     .box {
@@ -108,55 +110,16 @@
         /* Hide the mobile navigation links by default */
     }
 
-    .section {
-        padding: 10px;
-        /* Padding for each section */
-        margin: 10px 0px;
-        /* Margin between sections */
-        border: 2px solid black;
-        /* Border around each section */
-        /* background-color: aquamarine;  */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        /* Subtle shadow for depth */
-        display: flex;
-        /* Use flexbox for layout */
-        flex-direction: column;
-        /* Stack content vertically */
-        align-items: center;
-        /* Center content horizontally */
-        justify-content: center;
-        /* Center content vertically */
-        height: 100vh;
-        /* Full viewport height for each section */
-        width: 100%;
-        /* Full width for each section */
-    }
+    /* Duplicate .section definition removed and merged above for maintainability */
 
     #footer {
         background-color: #ffe5b4;
         border: 2px solid black;
-        display: flex;
-        justify-content: center;
-        /* Center footer content */
-        align-items: center;
-        /* Center footer content vertically */
-        height: 50px;
-        /* Fixed height for the footer */
-        position: relative;
-        /* Position relative to the page */
-        bottom: 0;
-        /* Stick to the bottom of the page */
-        width: 100%;
-        /* Full width of the page */
-    }
-
-    .footer-text {
-        font-size: 14px;
-        /* Smaller font size for footer text */
         text-align: center;
-        /* Center the text */
         padding: 10px;
-        /* Padding for the footer text */
+        position: relative;
+        width: 100%;
+        font-size: 14px;
     }
 
     .logo {
@@ -259,7 +222,7 @@
         /* Make the toggle switch circular */
         top: 0.125em;
         /* Position the toggle switch vertically */
-        left: 0.125em;
+        transition: transform 0.3s ease-in-out;
         /* Position the toggle switch horizontally */
         transition: transform 0.3s ease-in-out;
         /* Smooth transition for the toggle switch */
@@ -280,7 +243,7 @@
     }
 
     .container {
-        width: 100dvw;
+        width: 100vw;
         /* Maximum width for the container */
         margin: auto;
         /*center the container */
@@ -579,8 +542,8 @@
     }
     #certificate-card-button {
         position: absolute;
-        right: 45%;
-        left: 45%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .certificate-cards {
@@ -675,6 +638,14 @@
         /* stretch cards vertically */
         padding: 20px 0;
         animation: leftToRight 0.5s ease-in-out;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5em;
+        margin-bottom: 0.75em;
+        /* Ensure the image fits well within the card */
     }
 
 
@@ -868,7 +839,6 @@
 }
 
 /* Animation for moving text left and right */
-/* This animation moves the text left and right continuously */
 @keyframes moveText {
 
     0% {

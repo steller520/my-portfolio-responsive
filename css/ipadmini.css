@@ -141,7 +141,7 @@
         /* Ensure it stays above other content */
         border: 3px #333 solid;
         /* Border for the slider */
-        transition: transform 0.3 ease-in-out;
+        transition: transform 0.3s ease-in-out;
         /* Smooth transition for the slider */
     }
 
@@ -366,9 +366,9 @@
     .projects-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        /* 3 columns */
+        /* 2 columns */
         grid-template-rows: auto;
-        /* 2 rows */
+        /* Rows are created automatically based on content */
         gap: 24px;
         /* space between cards */
         justify-items: center;
@@ -376,6 +376,14 @@
         align-items: stretch;
         /* stretch cards vertically */
         padding: 20px 0;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5em;
+        margin-bottom: 0.75em;
+        /* Ensure the image fits well within the card */
     }
 
     .project-card {
@@ -520,7 +528,7 @@
         width: auto;
         height: auto;
         display: flex;
-        flex-direction: column
+        flex-direction: column;
             /* border: 1px solid #ccc; */
             /* Border around the circular progress bar */
 
