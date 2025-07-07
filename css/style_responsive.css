@@ -3,7 +3,6 @@
         box-sizing: border-box;
         /* Ensure padding and border are included in the element's total width and height */
     }
-
     body {
         font-family: Arial, sans-serif;
         /* Set a default font for the body */
@@ -262,7 +261,7 @@
     /*burger menu styles*/
 
     .navbar-mobile {
-         align-self: start;
+        align-self: start;
         display: flex;
         flex-direction: column;
         /* Use flexbox for layout */
@@ -350,7 +349,25 @@
         border-radius: 5px;
         /* Rounded corners for the navigation links */
     }
-}
+    .profile-picture {
+        width: 7.5em;
+        height: 7.5em;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 0.125em solid #4e54c8;
+        box-shadow: 0 0.125em 0.5em rgba(0,0,0,0.08);
+        animation: bounceIn 1s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+
+    .profile-picture2 {
+        width: 10em;
+        height: 15em;
+        object-fit: cover;
+        border: 0.125em solid #4e54c8;
+        box-shadow: 0 0.125em 0.5em rgba(0,0,0,0.08);
+        animation: bounceIn 1s cubic-bezier(.68,-0.55,.27,1.55);
+    }   
+
 
 /* Skills section styles */
 .skills-container {
@@ -400,6 +417,10 @@
     /* Fixed height for the circular progress container */
 }
 
+
+ 
+
+
 /* Progress bar and circular progress styles */
 /* Progress bar styles */
 .bar {
@@ -442,7 +463,9 @@
 .circle-bar {
     width: auto;
     height: auto;
-    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #ccc; */
     /* Border around the circular progress bar */
 
 }
@@ -524,6 +547,13 @@
     align-items: flex-start;
     padding: 20px;
     transition: box-shadow 0.2s;
+}
+.certificate-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    /* Ensure the image fits well within the card */
 }
 
 .certificate-card:hover {
@@ -760,21 +790,29 @@
     padding-top: 1em;
     text-align: center;
 }
+
 #footer {
     margin-top: 1em;
     padding-top: 2.5em;
     text-align: center;
     background-color: #ffe5b4;
     border: 2px solid black;
-    display: flex;  
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Center footer content */
-    align-items: center; /* Center footer content vertically */
-    height: 60px; /* Fixed height for the footer */
-    position: relative; /* Position relative to the page */
-    bottom: 0; /* Stick to the bottom of the page */
-    width: 100%; /* Full width of the page */
+    justify-content: center;
+    /* Center footer content */
+    align-items: center;
+    /* Center footer content vertically */
+    height: 60px;
+    /* Fixed height for the footer */
+    position: relative;
+    /* Position relative to the page */
+    bottom: 0;
+    /* Stick to the bottom of the page */
+    width: 100%;
+    /* Full width of the page */
 }
+
 ul {
     list-style: none;
     padding: 0;
@@ -783,4 +821,6 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
 }

@@ -15,6 +15,31 @@
         /* Light background color for the body */
     }
 
+    /*section styles */
+
+    .section {
+        padding: 10px;
+        /* Adds space inside each section */
+        margin: 10px 0px;
+        /* Adds space above and below each section */
+        border: 2px solid black;
+        /* Adds a black border around each section */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* Adds a subtle shadow for depth */
+        display: flex;
+        /* Uses flexbox for layout */
+        flex-direction: column;
+        /* Stacks content vertically */
+        align-items: center;
+        /* Centers content horizontally */
+        justify-content: center;
+        /* Centers content vertically */
+        height: 100vh;
+        /* Makes each section fill the viewport height */
+        width: 100%;
+        /* Makes each section full width */
+    }
+
     .box {
         /* border: 1px solid black; */
         /* Border around the box  to help in structure*/
@@ -283,7 +308,7 @@
         /* Adjust vertical position of the icon slightly for better alignment */
         right: 2%;
         /* Adjust horizontal position of the moon icon for better alignment */
-        
+
     }
 
     .icon-sun {
@@ -358,6 +383,7 @@
         /* Padding for the main content */
         width: 70%;
         /* Set a fixed width for the main content */
+        animation: leftToRight 0.5s ease-in-out;
     }
 
     .sidebar {
@@ -375,6 +401,7 @@
         /* Center content horizontally */
         justify-content: center;
         /* Center content vertically */
+        animation: rightToLeft 0.5s ease-in-out;
     }
 
     #about {
@@ -543,6 +570,19 @@
     /* Circular progress styles end */
     /* Skills section styles end */
     /*certificate card layout styles */
+    .certificates-main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #certificate-card-button {
+        position: absolute;
+        right: 45%;
+        left: 45%;
+    }
+
     .certificate-cards {
         display: flex;
         flex-wrap: wrap;
@@ -550,6 +590,15 @@
         justify-content: center;
         align-items: flex-start;
         padding: 20px 0;
+        animation: leftToRight 0.5s ease-in-out;
+    }
+
+    .certificate-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        /* Ensure the image fits well within the card */
     }
 
     .certificate-card {
@@ -625,7 +674,9 @@
         align-items: stretch;
         /* stretch cards vertically */
         padding: 20px 0;
+        animation: leftToRight 0.5s ease-in-out;
     }
+
 
     .project-card {
         background: #fff;
@@ -787,4 +838,103 @@
     }
 
     /* Contact section styles end */
+    #contact p {
+        border: 1px solid black;
+        margin: 0px 0px 0px 3.75em;
+        animation: moveText 5s linear infinite;
+    }
+
+    .profile-picture {
+        width: 15em;
+        height: 15em;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 0.125em solid #4e54c8;
+        box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.08);
+        animation: bounceIn 1s cubic-bezier(.68, -0.55, .27, 1.55);
+    }
+
+    .profile-picture2 {
+        width: 15em;
+        height: 22.5em;
+        object-fit: cover;
+        border: 0.125em solid #4e54c8;
+        box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.08);
+        animation: bounceIn 1s cubic-bezier(.68, -0.55, .27, 1.55);
+    }
+
+
+
+}
+
+/* Animation for moving text left and right */
+/* This animation moves the text left and right continuously */
+@keyframes moveText {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(30px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(-30px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes leftToRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rightToLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
