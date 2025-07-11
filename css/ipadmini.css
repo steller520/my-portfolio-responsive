@@ -183,7 +183,7 @@
 
     /* Move the toggle knob to the right when dark mode is active */
     #mode-toggle:checked+.slider::before {
-        transform: translateX(23px);
+        transform: translateX(1.4375em);
         /* Move the toggle switch to the right when checked */
     }
 
@@ -765,13 +765,18 @@
 
     /* Contact section styles end */
 
-    #home,
+
     #about,
     #skills,
     #certificates,
     #projects,
     #contact {
         padding-top: 1em;
+        text-align: center;
+    }
+    #home {
+        animation: leftToRight 0.5s ease-in-out;
+        padding-top: 2.5em;
         text-align: center;
     }
 

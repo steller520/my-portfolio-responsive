@@ -238,7 +238,7 @@
 
     /* Move the toggle knob to the right when dark mode is active */
     #mode-toggle:checked+.slider::before {
-        transform: translateX(23px);
+        transform: translateX(1.4375em);
         /* Move the toggle switch to the right when checked */
     }
 
@@ -289,7 +289,7 @@
         /* Arrange content in a row */
         justify-content: space-evenly;
         /* Space items evenly */
-        padding: 20px;
+        padding: 1.25em;
         /* Padding for the home section */
         align-items: center;
         /* Center items vertically */

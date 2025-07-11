@@ -158,9 +158,9 @@
         /* Empty content for the toggle switch */
         position: absolute;
         /* Position absolute for the toggle switch */
-        width: 18px;
+        width: 1.125em;
         /* Width of the toggle switch */
-        height: 18px;
+        height: 1.125em;
         /* Height of the toggle switch */
         background-color: rgb(155, 155, 155);
         /* Background color of the toggle switch */
@@ -178,7 +178,7 @@
 
     /* Move the toggle knob to the right when dark mode is active */
     #mode-toggle:checked+.slider::before {
-        transform: translateX(23px);
+        transform: translateX(1.4375em);
         /* Move the toggle switch to the right when checked */
     }
 
@@ -254,8 +254,8 @@
         /* Space between logo and title */
         position: relative;
         /* Position relative for the title */
-        top: 10px;
-        right: 60px;
+        top: 0.625em;
+        right: 3.75em;
     }
 
     /*burger menu styles*/
@@ -781,7 +781,7 @@
 
 /* Contact section styles end */
 
-#home,
+
 #about,
 #skills,
 #certificates,
@@ -789,6 +789,11 @@
 #contact {
     animation: leftToRight 0.5s ease-in-out;
     padding-top: 1em;
+    text-align: center;
+}
+#home{
+    animation: leftToRight 0.5s ease-in-out;
+    padding-top: 2.5em;
     text-align: center;
 }
 
