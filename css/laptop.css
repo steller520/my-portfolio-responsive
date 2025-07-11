@@ -183,7 +183,7 @@
         align-items: center;
         width: 3.125em;
         /* Width of the slider */
-        height: 1.625em;
+        height: 1.6245em;
         /* Height of the slider */
         padding: 1px 0px 0px 5px;
         background-color: rgba(127, 255, 212, 0.293);
@@ -213,15 +213,16 @@
         /* Empty content for the toggle switch */
         position: absolute;
         /* Position absolute for the toggle switch */
-        width: 1.125em;
+        width: 1.1358em;
         /* Width of the toggle switch */
-        height: 1.125em;
+        height: 1.1358em;
         /* Height of the toggle switch */
         background-color: rgb(155, 155, 155);
         /* Background color of the toggle switch */
         border-radius: 50%;
         /* Make the toggle switch circular */
-        top: 0.125em;
+        top: 0.059em;
+        left: 0.05em;
         /* Position the toggle switch vertically */
         transition: transform 0.3s ease-in-out;
         /* Position the toggle switch horizontally */
