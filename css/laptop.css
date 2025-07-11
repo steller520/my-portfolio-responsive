@@ -861,7 +861,8 @@
         object-fit: cover;
         border: 0.125em solid #4e54c8;
         box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.08);
-        animation: bounceIn 1s cubic-bezier(.68, -0.55, .27, 1.55);
+        animation: bounceIn 1s cubic-bezier(.68, -0.55, .27, 1.55), moveText 5s linear infinite;
+        animation-delay: 0s, 2s;
     }
 
     .profile-picture2 {
