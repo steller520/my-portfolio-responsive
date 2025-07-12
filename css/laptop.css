@@ -251,7 +251,7 @@
         /*center the container */
         padding: 0px;
         /* Padding for the container */
-        background-color: rgb(141, 255, 217);
+        background-color: rgb(169, 169, 151);
         /* Default background color for the container */
     }
 
@@ -457,10 +457,14 @@
         display: flex;
         /* Use flexbox for layout */
         flex-wrap: wrap;
+
+        margin-top: 2.5em;
+
+        
         /* Allow wrapping of content */
         flex-direction: row;
         /* Stack content vertically */
-        justify-content: space-evenly;
+        justify-content: space-around;
         /* Center content vertically */
         width: 50%;
         /* Set a fixed width for the circular progress container */
@@ -510,7 +514,7 @@
     /* Circular progress styles */
     .circle-bar {
         width: auto;
-        height: auto;
+        height: 160px;
         margin-bottom: 0.625em;
         /* border: 1px solid #ccc; */
         /* Border around the circular progress bar */
